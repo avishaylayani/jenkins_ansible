@@ -19,7 +19,7 @@ pipeline {
                     installation: 'Ansible',
                     inventory: 'hosts.ini',
                     playbook: 'facts_gathering.yml',
-                    credentialsid: 'ansible-jenkins'
+                    credentialsId: 'ansible-jenkins'
             }    
         }      
     }
