@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.jenkins.plugins.mina-sshd-api</groupId>
   <artifactId>mina-sshd-api-common</artifactId>
-  <version>2.13.1-117.v2f1a_b_66ff91d</version>
+  <version>2.13.2-125.v200281b_61d59</version>
   <packaging>hpi</packaging>
   <name>Mina SSHD API :: Common</name>
   <description>This plugin provides the Apache Mina SSHD Common library to plugins.</description>
@@ -27,7 +27,7 @@
   <scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false" child.scm.url.inherit.append.path="false">
     <connection>scm:git:https://github.com/jenkinsci/mina-sshd-api-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/mina-sshd-api-plugin.git</developerConnection>
-    <tag>2f1ab66ff91dd432ab3fb35cdb2d6bd55dd4bdf9</tag>
+    <tag>200281b61d59bba9748e49fdb6b211559829baa6</tag>
     <url>https://github.com/jenkinsci/mina-sshd-api-plugin</url>
   </scm>
   <distributionManagement>
@@ -44,7 +44,7 @@
     <dependency>
       <groupId>org.apache.sshd</groupId>
       <artifactId>sshd-common</artifactId>
-      <version>2.13.1</version>
+      <version>2.13.2</version>
       <scope>compile</scope>
       <exclusions>
         <exclusion>
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>bouncycastle-api</artifactId>
-      <version>2.30.1.78.1-233.vfdcdeb_0a_08a_a_</version>
+      <version>2.30.1.78.1-248.ve27176eb_46cb_</version>
       <scope>compile</scope>
       <optional>true</optional>
     </dependency>
@@ -77,7 +77,7 @@
       <plugin>
         <groupId>org.jenkins-ci.tools</groupId>
         <artifactId>maven-hpi-plugin</artifactId>
-        <version>3.55</version>
+        <version>3.56</version>
         <extensions>true</extensions>
       </plugin>
     </plugins>

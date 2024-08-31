@@ -27,7 +27,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>pipeline-utility-steps</artifactId>
-  <version>2.15.0</version>
+  <version>2.17.0</version>
   <packaging>hpi</packaging>
   <name>Pipeline Utility Steps</name>
   <description>The Jenkins Plugins Parent POM Project</description>
@@ -52,7 +52,7 @@
   <scm>
     <connection>scm:git:https://github.com/jenkinsci/pipeline-utility-steps-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/pipeline-utility-steps-plugin.git</developerConnection>
-    <tag>pipeline-utility-steps-2.15.0</tag>
+    <tag>pipeline-utility-steps-2.17.0</tag>
     <url>https://github.com/jenkinsci/pipeline-utility-steps-plugin</url>
   </scm>
   <distributionManagement>
@@ -69,7 +69,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-configuration2</artifactId>
-      <version>2.8.0</version>
+      <version>2.9.0</version>
       <scope>compile</scope>
       <exclusions>
         <exclusion>
@@ -84,103 +84,72 @@
     </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
+      <artifactId>commons-compress-api</artifactId>
+      <version>1.26.1-1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
       <artifactId>commons-text-api</artifactId>
-      <version>1.9-9.v39a_53e2e0343</version>
+      <version>1.11.0-95.v22a_d30ee5d36</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>commons-lang3-api</artifactId>
-      <version>3.12.0.0</version>
+      <version>3.13.0-62.v7d18e55f51e2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>structs</artifactId>
-      <version>318.va_f3ccb_729b_71</version>
+      <version>337.v1b_04ea_4df7c8</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>snakeyaml-api</artifactId>
-      <version>1.30.2-76.vc104f7ce9870</version>
+      <version>2.2-111.vc6598e30cc65</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>script-security</artifactId>
-      <version>1138.v8e727069a_025</version>
+      <version>1313.v7a_6067dc7087</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-step-api</artifactId>
-      <version>625.vd896b_f445a_f8</version>
+      <version>657.v03b_e8115821b_</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-model</artifactId>
-      <version>3.8.7</version>
+      <version>3.9.6</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-cps</artifactId>
-      <version>2660.vb_c0412dc4e6d</version>
+      <version>3853.vb_a_490d892963</version>
       <scope>compile</scope>
       <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-csv</artifactId>
-      <version>1.9.0</version>
+      <version>1.10.0</version>
       <scope>compile</scope>
     </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.main</groupId>
-      <artifactId>jenkins-core</artifactId>
-      <version>2.289.3</version>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.servlet</groupId>
-          <artifactId>servlet-api</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>animal-sniffer-annotations</artifactId>
-      <version>1.22</version>
-      <scope>provided</scope>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>commons-logging</groupId>
-      <artifactId>commons-logging</artifactId>
-      <version>1.2</version>
-      <scope>provided</scope>
-    </dependency>
   </dependencies>
-  <repositories>
-    <repository>
-      <id>repo.jenkins-ci.org</id>
-      <url>https://repo.jenkins-ci.org/public/</url>
-    </repository>
-  </repositories>
   <build>
     <plugins>
       <plugin>
         <groupId>org.jenkins-ci.tools</groupId>
         <artifactId>maven-hpi-plugin</artifactId>
-        <version>3.35</version>
+        <version>3.55</version>
         <extensions>true</extensions>
       </plugin>
     </plugins>

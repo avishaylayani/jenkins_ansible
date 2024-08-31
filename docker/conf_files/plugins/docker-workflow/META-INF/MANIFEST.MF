@@ -1,25 +1,30 @@
 Manifest-Version: 1.0
-Archiver-Version: Plexus Archiver
-Created-By: Apache Maven
-Built-By: rsandell
-Build-Jdk: 1.8.0_292
-Extension-Name: docker-workflow
-Specification-Title: Build and use Docker containers from pipelines
-Implementation-Title: docker-workflow
-Implementation-Version: 1.28
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 17
+Specification-Title: Docker Pipeline
+Specification-Version: 0.0
+Implementation-Title: Docker Pipeline
+Implementation-Version: 580.vc0c340686b_54
 Group-Id: org.jenkins-ci.plugins
+Artifact-Id: docker-workflow
 Short-Name: docker-workflow
 Long-Name: Docker Pipeline
 Url: https://github.com/jenkinsci/docker-workflow-plugin
-Minimum-Java-Version: 1.8
-Plugin-Version: 1.28
-Hudson-Version: 2.222.4
-Jenkins-Version: 2.222.4
-Plugin-Dependencies: workflow-basic-steps:2.20,workflow-cps:2.92,workf
- low-durable-task-step:2.35,workflow-step-api:2.23,cloudbees-folder:6.
- 15,docker-commons:1.19,pipeline-model-definition:1.8.5
+Plugin-Version: 580.vc0c340686b_54
+Hudson-Version: 2.361.4
+Jenkins-Version: 2.361.4
+Plugin-Dependencies: workflow-basic-steps:1017.vb_45b_302f0cea_,workflow
+ -cps:3659.v582dc37621d8,workflow-durable-task-step:1246.v5524618ea_097,
+ workflow-step-api:639.v6eca_cd8c04a_a_,cloudbees-folder:6.758.vfd75d09e
+ ea_a_1,docker-commons:419.v8e3cd84ef49c,pipeline-model-definition:2.213
+ 1.vb_9788088fdb_5
 Plugin-Developers: 
 Plugin-License-Name: MIT License
 Plugin-License-Url: https://opensource.org/licenses/MIT
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/docker-workfl
+ ow-plugin.git
+Plugin-ScmTag: c0c340686b542632d4879233cefcdb2573816f00
 Plugin-ScmUrl: https://github.com/jenkinsci/docker-workflow-plugin
+Plugin-GitHash: c0c340686b542632d4879233cefcdb2573816f00
+Implementation-Build: c0c340686b542632d4879233cefcdb2573816f00
 

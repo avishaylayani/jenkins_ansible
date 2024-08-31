@@ -1,0 +1,7 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.plugins.git.GitBranchSCMRevision plugin="git@5.4.1">
+  <head class="jenkins.plugins.git.GitBranchSCMHead">
+    <name>avishay</name>
+  </head>
+  <hash>6b07299de67edfdeea03ad005c989d6ad7700a0b</hash>
+</jenkins.plugins.git.GitBranchSCMRevision>
