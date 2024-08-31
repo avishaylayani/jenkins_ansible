@@ -2,23 +2,17 @@ pipeline {
     agent { label 'workers' }
     
     stages {      
-        stage("Execute Ansible") {
-            steps {
-                sh '''
-                    ansible --version
-                    ansible-playbook --version
-
-                '''
-                
-            }    
-        }  
         stage("Testing Ansible") {
             steps {
-                ansiblePlaybook  disableHostKeyChecking: true,
-                    installation: 'Ansible',
-                    inventory: 'hosts.ini',
-                    playbook: 'facts_gathering.yml',
-                    credentialsId: 'ansible-jenkins'
+                withCredentials([usernamePassword(credentialsId: 'admin_credentials_id', 
+                usernameVariable: 'ADMIN_USERNAME',
+                passwordVariable: 'ADMIN_PASSWORD')]) {
+                    ansiblePlaybook  disableHostKeyChecking: true,
+                        installation: 'Ansible',
+                        inventory: 'hosts.ini',
+                        playbook: 'facts_gathering.yml',
+                        credentialsId: 'ansible-jenkins'
+                }
             }    
         }      
     }

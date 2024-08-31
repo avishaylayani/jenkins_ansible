@@ -1,10 +1,22 @@
 ---
 -
   hosts: all
-  vars:
-  
-  tasks:
-    - name: Gather information on host
-      command: 'echo Working'
 
+  tasks:
+    - name: Create user
+      user: 
+        name: {{ ADMIN_USERNAME }}
+        pass: {{ ADMIN_PASSWORD }}
+        state: present
+      register: results
+    - name: debug
+      debug:
+        msg: results
+      
+    # - name: Create user "{{ item.1 }}"
+    #   user:
+    #     name: "{{ item.1 }}"
+    #     state: present
+    #     comment: "{{ item.1 | title }} {{ item.0 }}"
+    #   loop: "{{ users | subelements('members') }}"
 ...
