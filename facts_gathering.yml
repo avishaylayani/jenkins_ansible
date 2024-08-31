@@ -3,15 +3,15 @@
   hosts: all
 
   tasks:
-    - name: Create user
-      user: 
-        name: "{{ admin_user }}"
-        pass: "{{ admin_pass }}"
-        state: present
-      register: results
+    # - name: Create user
+    #   user: 
+    #     name: "{{ admin_user }}"
+    #     pass: "{{ admin_pass }}"
+    #     state: present
+    #   register: results
     - name: debug
       debug:
-        msg: results
+        msg: "{{ admin_user }}"
       
     # - name: Create user "{{ item.1 }}"
     #   user:
