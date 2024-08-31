@@ -6,7 +6,11 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'admin_credentials_id', 
                 usernameVariable: 'ADMIN_USERNAME',
                 passwordVariable: 'ADMIN_PASSWORD')]) {
-                    sh ' echo "${ADMIN_USERNAME}" '
+                    ansiblePlaybook  disableHostKeyChecking: true,
+                        installation: 'Ansible',
+                        inventory: 'hosts.ini',
+                        playbook: 'facts_gathering.yml',
+                        credentialsId: 'ansible-jenkins'
                 }
             }    
         }      
