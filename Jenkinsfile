@@ -11,6 +11,10 @@ pipeline {
                         inventory: 'hosts.ini',
                         playbook: 'facts_gathering.yml',
                         credentialsId: 'ansible-jenkins'
+                        extraVars: [
+                            new_user: "${ADMIN_USERNAME}",
+                            new_password: "${ADMIN_PASSWORD}"
+                        ]
                 }
             }    
         }      
