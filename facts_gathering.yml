@@ -11,7 +11,7 @@
     #   register: results
     - name: debug
       debug:
-        msg: "{{ username }}"
+        msg: "{{ lookup('ADMIN_USERNAME') }}"
       
     # - name: Create user "{{ item.1 }}"
     #   user:
