@@ -15,11 +15,11 @@ pipeline {
         }  
         stage("Testing Ansible") {
             steps {
-                sh '''
-
-
-                '''
-                
+                ansiblePlaybook credentialsid: 'Ansible_Jenkins', disableHostKeyChecking: true, installation: 'Ansible',
+                ansiblePlaybook  disableHostKeyChecking: true,
+                    installation: 'Ansible',
+                    inventory: 'hosts.ini',
+                    playbook: 'facts_gathering.yml'
             }    
         }      
     }

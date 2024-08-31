@@ -5,6 +5,6 @@
   
   tasks:
     - name: Gather information on host
-      command:  
+      command: 'echo Working'
 
 ...
