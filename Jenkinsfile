@@ -18,7 +18,8 @@ pipeline {
                 ansiblePlaybook  disableHostKeyChecking: true,
                     installation: 'Ansible',
                     inventory: 'hosts.ini',
-                    playbook: 'facts_gathering.yml'
+                    playbook: 'facts_gathering.yml',
+                    credentialsid: 'ansible-jenkins'
             }    
         }      
     }
