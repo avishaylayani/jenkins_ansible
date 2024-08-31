@@ -13,8 +13,8 @@ pipeline {
                         playbook: 'facts_gathering.yml',
                         credentialsId: 'ansible-jenkins'
                         extraVars {
-                            extraVar("ADMIN_USERNAME", "{{ ADMIN_USERNAME }}", true)
-                            extraVar("ADMIN_PASSWORD", "{{ ADMIN_PASSWORD }}", true)                            
+                            extraVar("ADMIN_USERNAME", "${params.ADMIN_USERNAME}")
+                            extraVar("ADMIN_PASSWORD", "${params.ADMIN_PASSWORD}")                            
                         }
                 }
             }    
