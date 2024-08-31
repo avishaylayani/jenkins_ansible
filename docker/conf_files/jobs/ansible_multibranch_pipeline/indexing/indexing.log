@@ -1,5 +1,5 @@
 Started by user [8mha:////4JNY3FFhh2OodUf0dKXOAWoUo3kEtq6/vjmcRtappXKhAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-[Sat Aug 31 11:47:34 UTC 2024] Starting branch indexing...
+[Sat Aug 31 16:27:24 UTC 2024] Starting branch indexing...
  > git --version # timeout=10
  > git --version # 'git version 2.39.2'
  > git ls-remote --symref -- https://github.com/lavishay-technion/jenkins_ansible.git # timeout=10
@@ -23,7 +23,7 @@ No changes detected: avishay (still at 6b07299de67edfdeea03ad005c989d6ad7700a0b)
   Checking branch main
       ‘Jenkinsfile’ found
     Met criteria
-No changes detected: main (still at bfe67f39ea17ad8ae6b2c8db4806cd02dbf6af9b)
+No changes detected: main (still at 957c90bf100dab6a772f0fe4cb33af94885f695b)
 Processed 2 branches
-[Sat Aug 31 11:47:36 UTC 2024] Finished branch indexing. Indexing took 2.4 sec
+[Sat Aug 31 16:27:27 UTC 2024] Finished branch indexing. Indexing took 2.3 sec
 Finished: SUCCESS
