@@ -3,12 +3,13 @@
   hosts: all
   become: true
   tasks:
-    - name: Create user
-      user: 
-        name: "{{ new_user }}"
-        password: "{{ new_password | password_hash('sha512') }}"
-        state: present
-      register: results
+    - name: Copying Public SSH Key
+      copy:
+        src: id_rsa.pub
+        dest: /home/admin/.ssh/id_rsa.pub
+        owner: admin
+        group: admin
+        mode: 0600
     # - name: debug
     #   debug:
     #     msg: "{{ ADMIN_USERNAME }}"
