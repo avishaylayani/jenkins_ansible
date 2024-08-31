@@ -6,12 +6,12 @@
   <usages/>
   <facets>
     <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@1371.vfee6b_095f0a_3">
-      <timestamp>1725104582017</timestamp>
+      <timestamp>1725115213778</timestamp>
       <nodeName>worker1</nodeName>
       <timestamp0>1725104582017</timestamp0>
     </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
     <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@1371.vfee6b_095f0a_3">
-      <timestamp>1725104604273</timestamp>
+      <timestamp>1725115214314</timestamp>
       <nodeName>worker2</nodeName>
       <timestamp0>1725104604273</timestamp0>
     </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
