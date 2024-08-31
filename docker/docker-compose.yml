@@ -42,5 +42,32 @@ services:
             SSH_USERPASS: jenkins
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock   
+    targeta:
+        hostname: target_rocky
+        build:
+            context: .
+            dockerfile: Dockerfile.rpm.target
+
+        networks:
+            - jenkins
+        environment:
+            SSH_USERNAME: ansible
+            SSH_USERPASS: ansible
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+
+    targetd:
+        hostname: target_debian
+        build:
+            context: .
+            dockerfile: Dockerfile.deb.target
+
+        networks:
+            - jenkins
+        environment:
+            SSH_USERNAME: ansible
+            SSH_USERPASS: ansible
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock  
 networks:
     jenkins:

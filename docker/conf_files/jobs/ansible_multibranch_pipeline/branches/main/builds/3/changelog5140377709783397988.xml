@@ -1,0 +1,37 @@
+commit fba56533af830f4da6c843b45eef83099d532092
+tree 19e265a1ad7e36570df0500f9e9b8b1b402e4eb9
+parent e2d0b225953ce692bfdfd3ef5801a6c3b01d6ae0
+author lavishay <lavishay@campus.technion.ac.il> 2024-08-31 19:30:21 +0300
+committer lavishay <lavishay@campus.technion.ac.il> 2024-08-31 19:30:21 +0300
+
+    running tests
+
+
+:100644 100644 481a292a1d46275b0881e346104723b226e56380 118c7d71dc23364d66c5d33dac03570dfd3ca6bb M	docker/conf_files/logs/health-checker.log
+commit e2d0b225953ce692bfdfd3ef5801a6c3b01d6ae0
+tree 93be9d138f1570f6369f6e742e741278ce0add9f
+parent 957c90bf100dab6a772f0fe4cb33af94885f695b
+author lavishay <lavishay@campus.technion.ac.il> 2024-08-31 19:29:56 +0300
+committer lavishay <lavishay@campus.technion.ac.il> 2024-08-31 19:29:56 +0300
+
+    running tests
+
+
+:100644 100644 cb11c6e232cb532b6618d22a587d79b9bd9cb28f ed8cfb6cf13a27be221a4be664bca3cf1d10c8f4 M	docker/conf_files/copy_reference_file.log
+:100644 100644 4f433ee80ee62d3979051f4d05cf7c3aa0df4f53 e367cb24cad017929a8e185210c683a914e8a175 M	docker/conf_files/fingerprints/0f/54/183b525e18c3cbb030cba2e1ef24.xml
+:000000 100644 0000000000000000000000000000000000000000 b9e765250f00b558c81e8c3203ac76190b05809f A	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/builds/2/build.xml
+:000000 100644 0000000000000000000000000000000000000000 f0a94eca7d98f946dc302031fc72f2b4f7055220 A	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/builds/2/changelog5311891277735132833.xml
+:000000 100644 0000000000000000000000000000000000000000 81443ba5dfb6c49758e5952cb3e81384417439fb A	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/builds/2/log
+:000000 100644 0000000000000000000000000000000000000000 27d9c60da6d4af283cf5aab1df1de160faad9793 A	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/builds/2/log-index
+:000000 100644 0000000000000000000000000000000000000000 fd130468ee9288893ef09462c0535b2e5d575d2d A	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/builds/2/workflow-completed/flowNodeStore.xml
+:100644 100644 8c155db71608ed11ffcdf53bb6919f684a851234 f8d43987530769940545ebe9ac48f881fd5a58af M	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/builds/permalinks
+:100644 100644 0cfbf08886fca9a91cb753ec8734c84fcbe52c9f 00750edc07d6415dcc07ae0351e9397b0222b7ba M	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/nextBuildNumber
+:100644 100644 ca554f5e5f5c2664ddbe2692d3313cedde51f4f7 a38613a5c6ac14119f3e86fb8f71b224d3fb75ee M	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/scm-last-seen-revision-hash.xml
+:100644 100644 ca554f5e5f5c2664ddbe2692d3313cedde51f4f7 a38613a5c6ac14119f3e86fb8f71b224d3fb75ee M	docker/conf_files/jobs/ansible_multibranch_pipeline/branches/main/scm-revision-hash.xml
+:100644 100644 e9e3a5360a1380ddbe6821ba81845612742f950c e36d45dbe6b341b631bffc59541210f3a60bfaeb M	docker/conf_files/jobs/ansible_multibranch_pipeline/indexing/indexing.log
+:100644 100644 b5fc8a0ed766a66af0c899806f2a7ea2a0620f5d 8cf80ba93f12afdc4a6bd42a5a5d34a0761dfe3c M	docker/conf_files/jobs/ansible_multibranch_pipeline/indexing/indexing.xml
+:100644 100644 275ad4dd1a982e22287c9fea9597f1da2ae37550 481a292a1d46275b0881e346104723b226e56380 M	docker/conf_files/logs/health-checker.log
+:000000 100644 0000000000000000000000000000000000000000 9dafe448efbbcba5311c598354f56cdcc4a3c336 A	docker/conf_files/logs/slaves/worker1/slave.log
+:000000 100644 0000000000000000000000000000000000000000 371f565512841b7c4ce0a820f6d177086fec7c71 A	docker/conf_files/logs/slaves/worker2/slave.log
+:100644 100644 5de2ffd5745ec05d8f9540dc49f31351ad52f4a6 61aae5a5630208a23878e9d4fc162c43050af2ee M	docker/conf_files/queue.xml
+:100644 100644 0038a5c6264ecb30ab4e2dc485ae0290909fa2f1 5de2ffd5745ec05d8f9540dc49f31351ad52f4a6 M	docker/conf_files/queue.xml.bak
