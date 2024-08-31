@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'workers' }
     
     stages {      
         stage("Execute Ansible") {
@@ -12,6 +12,15 @@ pipeline {
                 '''
                 
             }    
-        }    
+        }  
+        stage("Testing Ansible") {
+            steps {
+                sh '''
+
+
+                '''
+                
+            }    
+        }      
     }
 }
