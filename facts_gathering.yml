@@ -1,0 +1,10 @@
+---
+-
+  hosts: all
+  vars:
+  
+  tasks:
+    - name: Gather information on host
+      command:  
+
+...
