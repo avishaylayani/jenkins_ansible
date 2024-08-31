@@ -5,7 +5,7 @@
   tasks:
     - name: Create user
       user: 
-        name: "{{ ADMIN_USERNAME }}"
+        name: "${ADMIN_USERNAME}"
         pass: "{{ ADMIN_PASSWORD }}"
         state: present
       register: results
