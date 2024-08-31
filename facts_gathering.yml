@@ -1,12 +1,12 @@
 ---
 -
   hosts: all
-
+  become: true
   tasks:
     - name: Create user
       user: 
         name: "{{ new_user }}"
-        password: "{{ new_password }}"
+        password: "{{ new_password | password_hash('sha512') }}"
         state: present
       register: results
     # - name: debug
