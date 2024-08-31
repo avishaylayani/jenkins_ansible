@@ -7,7 +7,7 @@ pipeline {
                 usernameVariable: 'ADMIN_USERNAME',
                 passwordVariable: 'ADMIN_PASSWORD')]) {
                     sh '''
-                        echo $ADMIN_USERNAME
+                        echo ${ADMIN_USERNAME}
                     '''
                 }
             }    
