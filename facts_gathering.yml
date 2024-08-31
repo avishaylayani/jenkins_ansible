@@ -6,7 +6,7 @@
     - name: Create user
       user: 
         name: "{{ new_user }}"
-        pass: "{{ new_password | password_hash('sha512') }}"
+        password: "{{ new_password }}"
         state: present
       register: results
     # - name: debug
