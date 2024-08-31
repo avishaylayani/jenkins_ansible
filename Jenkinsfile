@@ -1,6 +1,14 @@
 pipeline {
     agent { label 'workers' }
-    
+
+    environment {
+                withCredentials([usernamePassword(credentialsId: 'admin_credentials_id', 
+                usernameVariable: 'ADMIN_USERNAME',
+                passwordVariable: 'ADMIN_PASSWORD')]){
+                    username = "${params.ADMIN_USERNAME}",
+                    password = "${params.ADMIN_PASSWORD}"
+                }
+    }
     stages {      
         stage("Testing Ansible") {
             steps {
@@ -12,10 +20,6 @@ pipeline {
                         inventory: 'hosts.ini',
                         playbook: 'facts_gathering.yml',
                         credentialsId: 'ansible-jenkins'
-                        extraVars {
-                            extraVar("ADMIN_USERNAME", "${params.ADMIN_USERNAME}")
-                            extraVar("ADMIN_PASSWORD", "${params.ADMIN_PASSWORD}")                            
-                        }
                 }
             }    
         }      
