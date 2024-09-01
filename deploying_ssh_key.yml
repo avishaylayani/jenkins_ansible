@@ -1,15 +1,62 @@
+# ---
+# -
+
 ---
--
+- name: Distribute Golden SSH Key
   hosts: all
-  become: true
+  gather_facts: no
+
+  vars:
+    ssh_key_path: "/root/.ssh/golden_ssh_key"
+    ssh_user: "Admin"
+
   tasks:
-    - name: Copying Public SSH Key
-      copy:
-        src: id_rsa.pub
-        dest: /home/admin/.ssh/id_rsa.pub
-        owner: admin
-        group: admin
-        mode: 0600
+    - name: Check if SSH key already exists
+      stat:
+        path: "{{ ssh_key_path }}"
+      register: ssh_key
+
+    - name: Generate SSH key pair if it doesn't exist
+      ansible.builtin.openssh_keypair:
+        path: "{{ ssh_key_path }}"
+        type: rsa
+        size: 4096
+        state: present
+        comment: "golden_key@example.com"
+      when: not ssh_key.stat.exists
+
+    - name: Ensure ~/.ssh directory exists on remote hosts
+      ansible.builtin.file:
+        path: "/{{ ssh_user }}/.ssh"
+        state: directory
+        mode: '0700'
+        owner: "{{ ssh_user }}"
+        group: "{{ ssh_user }}"
+      delegate_to: "{{ inventory_hostname }}"
+
+    - name: Distribute the public key to remote hosts
+      ansible.builtin.copy:
+        src: "{{ ssh_key_path }}.pub"
+        dest: "/{{ ssh_user }}/.ssh/authorized_keys"
+        owner: "{{ ssh_user }}"
+        group: "{{ ssh_user }}"
+        mode: '0600'
+        remote_src: yes
+      delegate_to: "{{ inventory_hostname }}"
+      with_items: "{{ groups['all'] }}"
+
+
+
+  # hosts: all
+  # become: true
+  # tasks:
+  #   - name: Copying Public SSH Key
+  #     copy:
+  #       src: id_rsa.pub
+  #       dest: /home/admin/.ssh/id_rsa.pub
+  #       owner: admin
+  #       group: admin
+  #       mode: 0600
     # - name: debug
     #   debug:
     #     msg: "{{ ADMIN_USERNAME }}"
