@@ -1,0 +1,19 @@
+---
+-
+  hosts: all
+  become: true
+  
+  tasks: 
+    - name: install Nginx on Debian
+      apt:
+        name: nginx
+        state: present
+      when: ansible_distribution == "Debian"
+
+    - name: install Nginx on Rocky
+      dnf:
+        name: Nginx
+        state: present
+      when: ansible_distribution == "Rocky"
+
+...

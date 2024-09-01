@@ -1,0 +1,36 @@
+---
+-
+  hosts: all
+  become: true
+  
+# tasks file for docker_ansible
+  tasks:
+    - name: Removing original nginx conf file if exists
+      file: 
+        path: /etc/nginx/nginx.conf
+        state: absent
+    
+    - name: Deploy new nginx template based on vars from the jenkinsfile
+      template:
+        src: templates/nginx.j2
+        dest: /etc/nginx/nginx.conf
+      notify: Restart Nginx
+
+    - name: Removing original index conf file if exists
+      file: 
+        path: /var/www/html/index.html
+        state: absent
+    
+    - name: Deploy new index template based on vars from the jenkinsfile
+      template:
+        src: templates/index.j2
+        dest: /var/www/html/index.html
+      notify: Restart Nginx
+
+
+  handlers:
+    - name: Restart Nginx ## Restarting Nginx after changing the conf file and placing the html file
+      service:
+        name: nginx
+        state: restarted
+      listen: "restart web services"
