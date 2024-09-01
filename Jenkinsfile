@@ -25,7 +25,7 @@ pipeline {
                     ansiblePlaybook(
                         disableHostKeyChecking: true,
                         installation: 'Ansible',
-                        inventory: 'hosts.ini',
+                        inventory: 'playbooks/hosts.ini',
                         playbook: 'playbooks/installations.yml',
                         credentialsId: 'ansible-jenkins',
                     )
@@ -39,7 +39,7 @@ pipeline {
                     ansiblePlaybook(
                         disableHostKeyChecking: true,
                         installation: 'Ansible',
-                        inventory: 'hosts.ini',
+                        inventory: 'playbooks/hosts.ini',
                         playbook: 'playbooks/copy_templates.yml',
                         credentialsId: 'ansible-jenkins',
                         extras: "--extra-vars '${extraVarsString}'"
