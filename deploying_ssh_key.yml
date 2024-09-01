@@ -5,7 +5,7 @@
 - name: Distribute Golden SSH Key
   hosts: all
   gather_facts: no
-
+  become: true
   vars:
     ssh_key_path: "/root/.ssh/golden_ssh_key"
     ssh_user: "root"
