@@ -19,7 +19,7 @@ pipeline {
         )        
     }
     stages {      
-        stage("Running Installations playbook") { //Installs Nginx
+        stage("Running Installations playbook - Installs nginx") {
             steps{
                 script {
                     ansiblePlaybook(
@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        stage {
+        stage ('Copying nginx.conf and html.index jinja templates to the host'){
             steps{
                 script {
                     def extraVarsString = "port=${port} index_file=${index_file} server=${server} title=${title}"
