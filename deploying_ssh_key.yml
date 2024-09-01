@@ -8,7 +8,7 @@
 
   vars:
     ssh_key_path: "/root/.ssh/golden_ssh_key"
-    ssh_user: "Admin"
+    ssh_user: "root"
 
   tasks:
     - name: Check if SSH key already exists
