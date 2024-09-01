@@ -18,14 +18,6 @@ pipeline {
         description: 'The only line in the HTML file, can be modified here'
         )        
     }
-            stage('Clone/Pull Git Details_App') {
-            steps {
-                script{
-                sh "chmod +x scripts/00_git_details_app.sh"
-                sh "bash scripts/00_git_details_app.sh"
-                }
-            }
-        }
     stages {      
         stage("Running Installations playbook") { //Installs Nginx
             steps{
