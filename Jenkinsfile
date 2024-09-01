@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'workers' }
+    agent { label 'targets' }
     parameters {
         string(name: 'port', 
             defaultValue: '4000',
