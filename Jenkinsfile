@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'targets' }
+    agent { label 'workers' }
     parameters {
         string(name: 'port', 
             defaultValue: '4000',
@@ -35,7 +35,7 @@ pipeline {
         stage ('Copying nginx.conf and html.index jinja templates to the host'){
             steps{
                 script {
-                    def extraVarsString = "port=${port} index_file=${index_file} server=${server} title=${title}"
+                    def extraVarsString = "port=${params.port} index_file=${params.index_file} server=${params.server} title=${params.title}"
                     ansiblePlaybook(
                         disableHostKeyChecking: true,
                         installation: 'Ansible',
