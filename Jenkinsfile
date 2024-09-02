@@ -18,7 +18,7 @@ pipeline {
                 }
             
             }
-        stage('deploying Key'){
+        stage("deploying Key") {
             steps {
                 script {
                     ansiblePlaybook(
