@@ -17,7 +17,7 @@ pipeline {
         defaultValue: "BIG TITLE",
         description: 'The only line in the HTML file, can be modified here'
         )        
-    }
+    }  
     stages { 
         stage("Running Installations playbook - Installs nginx") {
             steps{
