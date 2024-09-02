@@ -9,12 +9,14 @@
       copy:
         src: golden_ssh_key.pub
         dest: /root/.ssh/golden_ssh_key.pub
+        mode: "0644"
     - name: move private key to relevant folder
       copy:
         src: golden_ssh_key
         dest: /root/.ssh/golden_ssh_key
+        mode: "0600"
     - name: node create
-      command: "ssh-copy-id -i /root/.ssh/golden_ssh_key.pub root@{{ item }}"
+      command: "ssh-copy-id -i /root/.ssh/golden_ssh_key root@{{ item }}"
       with_items:
         - "{{ groups['targets'] }}"
 ...
