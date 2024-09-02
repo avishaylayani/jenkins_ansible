@@ -12,6 +12,6 @@
       state: touch
   - name: put pubkey
     lineinfile:
-      path: "/home/<super-user>/.ssh/authorized_keys"
+      path: "/root/.ssh/authorized_keys"
       line: "{{ gold_key }}"
 ...
