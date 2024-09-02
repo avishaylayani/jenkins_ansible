@@ -5,7 +5,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'golden_ssh_key.pub', variable: 'GOLD_KEY')]) {
                     script {
-                        def extraVarsString = 'gold_key=$"{GOLD_KEY}"'
+                        def extraVarsString = 'gold_key="${GOLD_KEY}"'
                         ansiblePlaybook(
                             disableHostKeyChecking: true,
                             installation: 'Ansible',
@@ -15,6 +15,18 @@ pipeline {
                             extras: "--extra-vars '${extraVarsString}'"
                         )
                     }
+                }
+            
+            }
+            steps {
+                script {
+                    ansiblePlaybook(
+                        disableHostKeyChecking: true,
+                        installation: 'Ansible',
+                        inventory: 'hosts.ini',
+                        playbook: 'registering_key.yml',
+                        credentialsId: 'ansible-jenkins',
+                    )
                 }
             
             }

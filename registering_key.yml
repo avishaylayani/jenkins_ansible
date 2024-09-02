@@ -1,0 +1,11 @@
+- hosts: 127.0.0.1   
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - debug: var=hostvars
+
+    - name: node create
+      command: "ssh-copy-id root@{{ hostvars[item]['hostname'] }}"
+      with_items:
+        - "{{ groups['targets'] }}"
