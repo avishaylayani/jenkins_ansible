@@ -18,20 +18,20 @@ pipeline {
                 }
             
             }
-            stage('deploying Key'){
-                steps {
-                    script {
-                        ansiblePlaybook(
-                            disableHostKeyChecking: true,
-                            installation: 'Ansible',
-                            inventory: 'hosts.ini',
-                            playbook: 'registering_key.yml',
-                            credentialsId: 'ansible-jenkins',
-                        )
-                    }
-                
+        stage('deploying Key'){
+            steps {
+                script {
+                    ansiblePlaybook(
+                        disableHostKeyChecking: true,
+                        installation: 'Ansible',
+                        inventory: 'hosts.ini',
+                        playbook: 'registering_key.yml',
+                        credentialsId: 'ansible-jenkins',
+                    )
                 }
+            
             }
-        }            
+        }
+                   
     }      
 }
