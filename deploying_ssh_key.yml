@@ -1,6 +1,3 @@
-# ---
-# -
-
 ---
 - name: Distribute Golden SSH Key
   hosts: all
