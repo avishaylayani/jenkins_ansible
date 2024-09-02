@@ -9,7 +9,7 @@
   - name: create empty file
     file:
       path: "/root/.ssh/authorized_keys"
-      state: present
+      state: touch
   - name: put pubkey
     lineinfile:
       path: "/home/<super-user>/.ssh/authorized_keys"
