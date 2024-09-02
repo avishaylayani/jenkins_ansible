@@ -7,7 +7,7 @@
     - debug: var=hostvars
 
     - name: node create
-      command: "ssh-copy-id root@{{ hostvars[item]['hostname'] }}"
+      command: "ssh-copy-id root@{{ item }}"
       with_items:
         - "{{ groups['targets'] }}"
 ...
