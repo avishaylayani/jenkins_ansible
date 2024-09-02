@@ -28,10 +28,11 @@ pipeline {
                         playbook: 'registering_key.yml',
                         credentialsId: 'ansible-jenkins',
                     )
-                }
+                    }   
             
+                }
             }
-        }
                    
-    }      
+        }      
+    }
 }
