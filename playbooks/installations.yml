@@ -2,11 +2,6 @@
   hosts: all
   become: true
   tasks: 
-    - name: discover OS
-      command: 
-        - . /etc/os-release
-        - echo $ID
-      register: OS
     - name: install Nginx on Debian
       apt:
         name: nginx
