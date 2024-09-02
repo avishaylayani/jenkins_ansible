@@ -15,6 +15,11 @@
         src: golden_ssh_key
         dest: /root/.ssh/golden_ssh_key
         mode: "0600"
+    - name: Add SSH private key to the agent
+      command: "ssh-add /root/.ssh/golden_ssh_key"
+      environment:
+        SSH_AUTH_SOCK: /root/.ssh/ssh_auth_sock
+      ignore_errors: yes
     - name: node create
       command: "ssh-copy-id -i /root/.ssh/golden_ssh_key root@{{ item }}"
       with_items:
