@@ -31,8 +31,6 @@
 
 
   handlers:
-    - name: Restart Nginx ## Restarting Nginx after changing the conf file and placing the html file
-      service:
-        name: nginx
-        state: restarted
+    - name: Restart Nginx ## Restarting Nginx after changing the conf file and placing the html file(Doing it manully, couldn't get the rocky to work with the service module)
+      shell: 'nginx -s reload'
       listen: "restart web services"
