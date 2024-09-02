@@ -5,10 +5,14 @@
   become: true
   tasks:
     - debug: var=hostvars
-    - name: move key to relevant folder
+    - name: move public key to relevant folder
       copy:
         src: golden_ssh_key.pub
         dest: /root/.ssh/golden_ssh_key.pub
+    - name: move private key to relevant folder
+      copy:
+        src: golden_ssh_key
+        dest: /root/.ssh/golden_ssh_key
     - name: node create
       command: "ssh-copy-id -i /root/.ssh/golden_ssh_key.pub root@{{ item }}"
       with_items:
