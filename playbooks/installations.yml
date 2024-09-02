@@ -1,8 +1,6 @@
----
 -
   hosts: all
   become: true
-  
   tasks: 
     - name: discover OS
       command: 
