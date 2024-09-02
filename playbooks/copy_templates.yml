@@ -6,7 +6,7 @@
 # tasks file for docker_ansible
   tasks:
     - name: Removing original nginx conf file if exists
-      command: '( sudo rm -rf /etc/nginx/nginx.conf 2> /dev/null && echo "[-] Old file removed" ) || echo "[+] Creating new file"'
+      shell: '( sudo rm -rf /etc/nginx/nginx.conf 2> /dev/null && echo "[-] Replacing old file" ) || echo "[+] Creating new file"'
 
     
     - name: Deploy new nginx template based on vars from the jenkinsfile
@@ -16,7 +16,7 @@
       notify: Restart Nginx
 
     - name: Removing original index conf file if exists
-      command: '( sudo rm -rf /var/www/html/index.html 2> /dev/null && echo "[-] Old file removed" ) || echo "[+] Creating new file"'
+      shell: '( sudo rm -rf /var/www/html/index.html 2> /dev/null && echo "[-] Replacing old file" ) || echo "[+] Creating new file"'
     
     - name: Deploy new index template based on vars from the jenkinsfile
       template:
