@@ -6,17 +6,17 @@
       command: 
         - . /etc/os-release
         - echo $ID
-      register: os
+      register: OS
     - name: install Nginx on Debian
       apt:
         name: nginx
         state: present
-      when: "{{ os }}" == "Debian"
+      when: "{{ OS }}" == "Debian"
 
     - name: install Nginx on Rocky
       dnf:
-        name: Nginx
+        name: nginx
         state: present
-      when: "{{ os }}" == "Rocky"
+      when: "{{ OS }}" == "Rocky"
 
 ...
