@@ -1,6 +1,7 @@
 pipeline {
     agent { label 'workers' }
-    stages {      
+
+    stages {
         stage("Testing Ansible") {
             steps {
                 withCredentials([string(credentialsId: 'golden_ssh_key.pub', variable: 'GOLD_KEY')]) {
@@ -16,9 +17,10 @@ pipeline {
                         )
                     }
                 }
-            
             }
-        stage("deploying Key") {
+        }
+        
+        stage("Deploying Key") {
             steps {
                 script {
                     ansiblePlaybook(
@@ -26,13 +28,10 @@ pipeline {
                         installation: 'Ansible',
                         inventory: 'hosts.ini',
                         playbook: 'registering_key.yml',
-                        credentialsId: 'ansible-jenkins',
+                        credentialsId: 'ansible-jenkins'
                     )
-                    }   
-            
                 }
             }
-                   
-        }      
+        }
     }
 }
