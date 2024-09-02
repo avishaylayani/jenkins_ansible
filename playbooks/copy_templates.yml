@@ -15,7 +15,7 @@
         dest: /etc/nginx/nginx.conf
       notify: Restart Nginx
 
-    - name: Removing original index conf file if exists
+    - name: Removing original index conf file if exists 
       shell: '( sudo rm -rf /var/www/html/index.html 2> /dev/null && echo "[-] Replacing old file" ) || echo "[+] Creating new file"'
     
     - name: Creating the html directory in /var/www/html
@@ -23,7 +23,7 @@
         path: /var/www/html/
         state: directory
         mode: '0755'
-    - name: Deploy new index template based on vars from the jenkinsfile
+    - name: Deploy new index template based on vars from the jenkinsfile  ## Creating the html file for testing
       template:
         src: templates/index.j2
         dest: /var/www/html/index.html
