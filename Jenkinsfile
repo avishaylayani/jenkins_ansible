@@ -18,7 +18,7 @@ pipeline {
                 }
             
             }
-            steps {
+            steps ('deploying Key'){
                 script {
                     ansiblePlaybook(
                         disableHostKeyChecking: true,
