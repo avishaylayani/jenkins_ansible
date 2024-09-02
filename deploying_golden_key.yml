@@ -6,10 +6,13 @@
     file:
       path: "/root/.ssh"
       state: directory
+      mode: '0700'
   - name: create empty file
     file:
       path: "/root/.ssh/authorized_keys"
       state: touch
+      mode: '0600'
+
   - name: put pubkey
     lineinfile:
       path: "/root/.ssh/authorized_keys"
