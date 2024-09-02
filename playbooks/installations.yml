@@ -11,12 +11,12 @@
       apt:
         name: nginx
         state: present
-      when: "{{ OS }}" == "Debian"
+      when: ansible_distribution == "Debian"
 
     - name: install Nginx on Rocky
       dnf:
         name: nginx
         state: present
-      when: "{{ OS }}" == "Rocky"
+      when: ansible_distribution == "Rocky"
 
 ...
