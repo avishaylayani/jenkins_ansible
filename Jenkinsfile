@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'workers' }
-    parameters {
+    parameters { // Setting parameters for nginx config, and the title that will be displayed in the HTML
         string(name: 'port', 
             defaultValue: '4000',
             description: 'The port that Nginx will be accessible on'
