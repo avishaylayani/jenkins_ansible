@@ -1,18 +1,17 @@
 ---
 - hosts: all
   become: true
-  become_user: "super-user"
   tasks:
   - name: make direcotry
     file:
-      path: "/home/<super-user>/.ssh"
+      path: "/root/.ssh"
       state: directory
   - name: create empty file
     file:
-      path: "/home/<super-user>/.ssh/authorized_keys"
-      state: touch
+      path: "/root/.ssh/authorized_keys"
+      state: present
   - name: put pubkey
     lineinfile:
       path: "/home/<super-user>/.ssh/authorized_keys"
-      line: "{{ pubkey }}"
+      line: "{{ gold_key }}"
 ...
