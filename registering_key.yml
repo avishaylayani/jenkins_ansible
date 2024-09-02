@@ -5,9 +5,12 @@
 
   tasks:
     - debug: var=hostvars
-
+    - name: move key to relevant folder
+      copy:
+        src: golden_ssh_key.pub
+        dest: /root/.ssh/golden_ssh_key.pub
     - name: node create
-      command: "ssh-copy-id root@{{ item }}"
+      command: "ssh-copy-id -i /root/.ssh/golden_ssh_key.pub root@{{ item }}"
       with_items:
         - "{{ groups['targets'] }}"
 ...
