@@ -18,7 +18,7 @@ pipeline {
         description: 'The only line in the HTML file, can be modified here'
         )        
     }
-    stages {      
+    stages { 
         stage("Running Installations playbook - Installs nginx") {
             steps{
                 script {
