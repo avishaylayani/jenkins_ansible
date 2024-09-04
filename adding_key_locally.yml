@@ -1,4 +1,7 @@
 ---
+## This playbook copies the golden ssh key to the root's .ssh folder
+## This way we can connect from the worker to the target using that key(Testing the key works)
+
 - hosts: 127.0.0.1   
   connection: local
   gather_facts: no
@@ -15,8 +18,4 @@
         src: golden_ssh_key
         dest: /root/.ssh/golden_ssh_key
         mode: "0600"
-    - name: node create
-      command: "ssh-copy-id -i /root/.ssh/golden_ssh_key root@{{ item }}"
-      with_items:
-        - "{{ groups['targets'] }}"
 ...
