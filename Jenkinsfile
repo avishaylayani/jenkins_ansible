@@ -27,7 +27,7 @@ pipeline {
                         disableHostKeyChecking: true,
                         installation: 'Ansible',
                         inventory: 'hosts.ini',
-                        playbook: 'registering_key.yml',
+                        playbook: 'adding_key_locally.yml',
                         credentialsId: 'ansible-jenkins'
                     )
                 }
