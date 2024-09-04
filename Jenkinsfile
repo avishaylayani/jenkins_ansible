@@ -12,7 +12,7 @@ pipeline {
                             disableHostKeyChecking: true,
                             installation: 'Ansible',
                             inventory: 'hosts.ini',
-                            playbook: 'facts_gathering.yml',
+                            playbook: 'user_creation.yml',
                             credentialsId: 'ansible-jenkins',
                             extras: "--extra-vars '${extraVarsString}'"
                         )
