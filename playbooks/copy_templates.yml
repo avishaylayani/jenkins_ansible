@@ -31,6 +31,12 @@
 
 
   handlers:
-    - name: Restart Nginx ## Restarting Nginx after changing the conf file and placing the html file(Doing it manully, couldn't get the rocky to work with the service module)
-      shell: 'nginx -s reload'
-      listen: "restart web services"
+    - name: Restart Ngnix
+      ansible.builtin.systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+    # - name: Restart Nginx ## Restarting Nginx after changing the conf file and placing the html file(Doing it manully, couldn't get the rocky to work with the service module)
+    #   shell: 'nginx -s reload'
+    #   listen: "restart web services"
