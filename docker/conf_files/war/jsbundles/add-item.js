@@ -124,7 +124,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default().when(getItems()).done(function (da
       item.setAttribute("aria-checked", "false");
       var iconDiv = drawIcon(elem);
       item.appendChild(iconDiv);
-      var label = item.appendChild(document.createElement("label"));
+      var labelContainer = document.createElement("div");
+      item.appendChild(labelContainer);
+      var label = labelContainer.appendChild(document.createElement("label"));
       var radio = label.appendChild(document.createElement("input"));
       radio.type = "radio";
       radio.name = "mode";
@@ -132,7 +134,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default().when(getItems()).done(function (da
       var displayName = label.appendChild(document.createElement("span"));
       displayName.className = "label";
       displayName.appendChild(document.createTextNode(elem.displayName));
-      var desc = item.appendChild(document.createElement("div"));
+      var desc = labelContainer.appendChild(document.createElement("div"));
       desc.className = "desc";
       desc.innerHTML = checkForLink(elem.description);
       function select(e) {

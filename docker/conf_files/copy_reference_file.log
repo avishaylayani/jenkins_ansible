@@ -65,3 +65,17 @@ SKIPPED plugins/pipeline-utility-steps.jpi : Installed version (2.17.0) has been
 SKIPPED plugins/docker-workflow.jpi : Installed version (580.vc0c340686b_54) has been manually upgraded from initial version (1.28)
 SKIPPED plugins/pipeline-graph-view.jpi : Installed version (332.vb_232ced67fa_9) has been manually upgraded from initial version (144.vf3924feb_7e35)
 --- Copied files finished at Sat Aug 31 16:26:22 UTC 2024
+--- Copying files at Fri Sep  6 09:29:33 UTC 2024
+SKIPPED plugins/pipeline-utility-steps.jpi : Installed version (2.17.0) has been manually upgraded from initial version (2.15.0)
+UPGRADED plugins/script-security.jpi : Image version (1358.vb_26663c13537) is newer than installed version (1354.va_70a_fe478c7f)
+UPGRADED plugins/snakeyaml-api.jpi : Image version (2.3-123.v13484c65210a_) is newer than installed version (2.2-121.v5a_68b_9300b_d4)
+SKIPPED plugins/docker-workflow.jpi : Installed version (580.vc0c340686b_54) has been manually upgraded from initial version (1.28)
+UPGRADED plugins/workflow-cps.jpi : Image version (3961.ve48ee2c44a_b_3) is newer than installed version (3953.v19f11da_8d2fa_)
+UPGRADED plugins/commons-lang3-api.jpi : Image version (3.17.0-84.vb_b_938040b_078) is newer than installed version (3.16.0-82.ve2b_07d659d95)
+SKIPPED plugins/pipeline-graph-view.jpi : Installed version (332.vb_232ced67fa_9) has been manually upgraded from initial version (144.vf3924feb_7e35)
+--- Copied files finished at Fri Sep  6 09:29:35 UTC 2024
+--- Copying files at Fri Sep  6 09:32:27 UTC 2024
+SKIPPED plugins/pipeline-utility-steps.jpi : Installed version (2.17.0) has been manually upgraded from initial version (2.15.0)
+SKIPPED plugins/docker-workflow.jpi : Installed version (580.vc0c340686b_54) has been manually upgraded from initial version (1.28)
+SKIPPED plugins/pipeline-graph-view.jpi : Installed version (332.vb_232ced67fa_9) has been manually upgraded from initial version (144.vf3924feb_7e35)
+--- Copied files finished at Fri Sep  6 09:32:29 UTC 2024

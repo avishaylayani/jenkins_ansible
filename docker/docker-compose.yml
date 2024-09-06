@@ -6,7 +6,7 @@ services:
             context: .
             dockerfile: Dockerfile.main
         ports:
-            - "80:8080"
+            - "8080:8080"
         networks:
             - jenkins
         volumes:
@@ -47,6 +47,8 @@ services:
         build:
             context: .
             dockerfile: Dockerfile.rpm.target
+        ports:
+            - "100:4000"
 
         networks:
             - jenkins
@@ -69,5 +71,7 @@ services:
             SSH_USERPASS: ansible
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock  
+        ports:
+            - "200:4000"
 networks:
     jenkins:
