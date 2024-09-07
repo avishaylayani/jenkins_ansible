@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.jenkins.plugins</groupId>
   <artifactId>pipeline-graph-view</artifactId>
-  <version>332.vb_232ced67fa_9</version>
+  <version>335.v064a_314706a_e</version>
   <packaging>hpi</packaging>
   <name>Pipeline Graph View Plugin</name>
   <description>The Jenkins Plugins Parent POM Project</description>
@@ -19,7 +19,7 @@
   <scm>
     <connection>scm:git:https://github.com/jenkinsci/pipeline-graph-view-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/pipeline-graph-view-plugin.git</developerConnection>
-    <tag>b232ced67fa941257f7fbe237a1f7f05466baa67</tag>
+    <tag>064a314706ae4b68b9cfe3fddd71599f5aa87364</tag>
     <url>https://github.com/jenkinsci/pipeline-graph-view-plugin</url>
   </scm>
   <distributionManagement>

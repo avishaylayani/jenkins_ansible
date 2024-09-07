@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.jenkins.plugins</groupId>
   <artifactId>checks-api</artifactId>
-  <version>2.2.0</version>
+  <version>2.2.1</version>
   <packaging>hpi</packaging>
   <name>Checks API plugin</name>
   <description>Defines an API for Jenkins to publish checks to SCM platforms.</description>
@@ -26,7 +26,7 @@
   <scm>
     <connection>scm:git:https://github.com/jenkinsci/checks-api-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/checks-api-plugin.git</developerConnection>
-    <tag>v2.2.0</tag>
+    <tag>v2.2.1</tag>
     <url>https://github.com/jenkinsci/checks-api-plugin</url>
   </scm>
   <distributionManagement>
@@ -49,19 +49,19 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>commons-text-api</artifactId>
-      <version>1.11.0-95.v22a_d30ee5d36</version>
+      <version>1.12.0-119.v73ef73f2345d</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>commons-lang3-api</artifactId>
-      <version>3.13.0-62.v7d18e55f51e2</version>
+      <version>3.14.0-76.vda_5591261cfe</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>display-url-api</artifactId>
-      <version>2.200.vb_9327d658781</version>
+      <version>2.204.vf6fddd8a_8b_e9</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -73,7 +73,7 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-support</artifactId>
-      <version>865.v43e78cc44e0d</version>
+      <version>907.v6713a_ed8a_573</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
@@ -82,7 +82,7 @@
       <plugin>
         <groupId>org.jenkins-ci.tools</groupId>
         <artifactId>maven-hpi-plugin</artifactId>
-        <version>3.51</version>
+        <version>3.55</version>
         <extensions>true</extensions>
       </plugin>
     </plugins>

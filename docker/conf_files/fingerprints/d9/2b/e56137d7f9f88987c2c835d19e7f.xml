@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2024-09-07 12:53:11.341 UTC</timestamp>
+  <md5sum>d92be56137d7f9f88987c2c835d19e7f</md5sum>
+  <fileName>Credential id=golden_ssh_key.pub name=golden_ssh_key.pub</fileName>
+  <usages>
+    <entry>
+      <string>Jenkins_Ansible/2_ssh_key</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

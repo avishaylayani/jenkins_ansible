@@ -1,0 +1,40 @@
+Started by user [8mha:////4NUxn7dRxQVKnrG3sNWNjFkDOYp5WCa4Vib2ErlgnhujAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[Sat Sep 07 12:43:01 UTC 2024] Starting branch indexing...
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git ls-remote --symref -- https://github.com/lavishay-technion/jenkins_ansible.git # timeout=10
+Creating git repository in /var/jenkins_home/caches/git-d4d84e042528e4e5d4d2180bedeb843b
+ > git init /var/jenkins_home/caches/git-d4d84e042528e4e5d4d2180bedeb843b # timeout=10
+Setting origin to https://github.com/lavishay-technion/jenkins_ansible.git
+ > git config remote.origin.url https://github.com/lavishay-technion/jenkins_ansible.git # timeout=10
+Fetching & pruning origin...
+Listing remote references...
+ > git config --get remote.origin.url # timeout=10
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git ls-remote -h -- https://github.com/lavishay-technion/jenkins_ansible.git # timeout=10
+Fetching upstream changes from origin
+ > git config --get remote.origin.url # timeout=10
+ > git fetch --tags --force --progress --prune -- origin +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking branches...
+  Checking branch 1_gathering_facts
+      ‘Jenkinsfile’ found
+    Met criteria
+Scheduled build for branch: 1_gathering_facts
+  Checking branch change_docker_files_2_arm64
+      ‘Jenkinsfile’ not found
+    Does not meet criteria
+  Checking branch 2_ssh_key
+      ‘Jenkinsfile’ found
+    Met criteria
+Scheduled build for branch: 2_ssh_key
+  Checking branch main
+      ‘Jenkinsfile’ not found
+    Does not meet criteria
+  Checking branch 3_installations
+      ‘Jenkinsfile’ found
+    Met criteria
+Scheduled build for branch: 3_installations
+Processed 5 branches
+[Sat Sep 07 12:43:18 UTC 2024] Finished branch indexing. Indexing took 17 sec
+Finished: SUCCESS
