@@ -2,7 +2,7 @@
 <jenkins.branch.MultiBranchProject_-State plugin="branch-api@2.1178.v969d9eb_c728e">
   <sourceActions>
     <entry>
-      <string>3fb1b058-38e9-4a82-bb41-fce929f6643b</string>
+      <string>10e21442-4b1f-48ea-8828-dc8f95c2ddf2</string>
       <list>
         <jenkins.plugins.git.GitRemoteHeadRefAction plugin="git@5.4.1">
           <remote>https://github.com/lavishay-technion/jenkins_ansible.git</remote>

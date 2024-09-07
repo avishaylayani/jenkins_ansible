@@ -1,40 +1,36 @@
 Started by user [8mha:////4NUxn7dRxQVKnrG3sNWNjFkDOYp5WCa4Vib2ErlgnhujAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-[Sat Sep 07 12:43:01 UTC 2024] Starting branch indexing...
+[Sat Sep 07 13:16:21 UTC 2024] Starting branch indexing...
  > git --version # timeout=10
  > git --version # 'git version 2.39.2'
  > git ls-remote --symref -- https://github.com/lavishay-technion/jenkins_ansible.git # timeout=10
-Creating git repository in /var/jenkins_home/caches/git-d4d84e042528e4e5d4d2180bedeb843b
- > git init /var/jenkins_home/caches/git-d4d84e042528e4e5d4d2180bedeb843b # timeout=10
+ > git rev-parse --resolve-git-dir /var/jenkins_home/caches/git-d4d84e042528e4e5d4d2180bedeb843b/.git # timeout=10
 Setting origin to https://github.com/lavishay-technion/jenkins_ansible.git
  > git config remote.origin.url https://github.com/lavishay-technion/jenkins_ansible.git # timeout=10
-Fetching & pruning origin...
-Listing remote references...
- > git config --get remote.origin.url # timeout=10
- > git --version # timeout=10
- > git --version # 'git version 2.39.2'
- > git ls-remote -h -- https://github.com/lavishay-technion/jenkins_ansible.git # timeout=10
-Fetching upstream changes from origin
- > git config --get remote.origin.url # timeout=10
- > git fetch --tags --force --progress --prune -- origin +refs/heads/*:refs/remotes/origin/* # timeout=10
-Checking branches...
-  Checking branch 1_gathering_facts
-      ‘Jenkinsfile’ found
-    Met criteria
-Scheduled build for branch: 1_gathering_facts
-  Checking branch change_docker_files_2_arm64
-      ‘Jenkinsfile’ not found
-    Does not meet criteria
-  Checking branch 2_ssh_key
-      ‘Jenkinsfile’ found
-    Met criteria
-Scheduled build for branch: 2_ssh_key
-  Checking branch main
-      ‘Jenkinsfile’ not found
-    Does not meet criteria
-  Checking branch 3_installations
-      ‘Jenkinsfile’ found
-    Met criteria
-Scheduled build for branch: 3_installations
-Processed 5 branches
-[Sat Sep 07 12:43:18 UTC 2024] Finished branch indexing. Indexing took 17 sec
-Finished: SUCCESS
+ERROR: [Sat Sep 07 13:16:22 UTC 2024] Could not fetch branches from source 10e21442-4b1f-48ea-8828-dc8f95c2ddf2
+[Sat Sep 07 13:16:22 UTC 2024] Finished branch indexing. Indexing took 1 sec
+FATAL: Failed to recompute children of Jenkins Ansible
+hudson.plugins.git.GitException: Command "git config remote.origin.url https://github.com/lavishay-technion/jenkins_ansible.git" returned status code 128:
+stdout: 
+stderr: fatal: not in a git directory
+
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2846)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2766)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2761)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:2051)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:2063)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.setRemoteUrl(CliGitAPIImpl.java:1662)
+	at PluginClassLoader for git-client//hudson.plugins.git.GitAPI.setRemoteUrl(GitAPI.java:180)
+	at PluginClassLoader for git//jenkins.plugins.git.AbstractGitSCMSource.doRetrieve(AbstractGitSCMSource.java:400)
+Caused: java.io.IOException
+	at PluginClassLoader for git//jenkins.plugins.git.AbstractGitSCMSource.doRetrieve(AbstractGitSCMSource.java:419)
+	at PluginClassLoader for git//jenkins.plugins.git.AbstractGitSCMSource.doRetrieve(AbstractGitSCMSource.java:352)
+	at PluginClassLoader for git//jenkins.plugins.git.AbstractGitSCMSource.retrieve(AbstractGitSCMSource.java:611)
+	at PluginClassLoader for scm-api//jenkins.scm.api.SCMSource._retrieve(SCMSource.java:372)
+	at PluginClassLoader for scm-api//jenkins.scm.api.SCMSource.fetch(SCMSource.java:282)
+	at PluginClassLoader for branch-api//jenkins.branch.MultiBranchProject.computeChildren(MultiBranchProject.java:654)
+	at PluginClassLoader for cloudbees-folder//com.cloudbees.hudson.plugins.folder.computed.ComputedFolder.updateChildren(ComputedFolder.java:269)
+	at PluginClassLoader for cloudbees-folder//com.cloudbees.hudson.plugins.folder.computed.FolderComputation.run(FolderComputation.java:167)
+	at PluginClassLoader for branch-api//jenkins.branch.MultiBranchProject$BranchIndexing.run(MultiBranchProject.java:1057)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:446)
+Finished: FAILURE

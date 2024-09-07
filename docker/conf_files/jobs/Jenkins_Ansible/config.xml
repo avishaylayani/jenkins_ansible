@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject plugin="workflow-multibranch@795.ve0cb_1f45ca_9a_">
   <actions/>
-  <description>Running Ansible playbooks via Jenkins multibranch-pipeline</description>
+  <description>Running Ansible playbooks via Jenkins</description>
   <displayName>Jenkins Ansible</displayName>
   <properties>
     <org.jenkinsci.plugins.docker.workflow.declarative.FolderConfig plugin="docker-workflow@580.vc0c340686b_54">
@@ -28,7 +28,7 @@
     <data>
       <jenkins.branch.BranchSource>
         <source class="jenkins.plugins.git.GitSCMSource" plugin="git@5.4.1">
-          <id>3fb1b058-38e9-4a82-bb41-fce929f6643b</id>
+          <id>10e21442-4b1f-48ea-8828-dc8f95c2ddf2</id>
           <remote>https://github.com/lavishay-technion/jenkins_ansible.git</remote>
           <credentialsId></credentialsId>
           <traits>

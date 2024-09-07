@@ -1,7 +1,0 @@
-<?xml version='1.1' encoding='UTF-8'?>
-<jenkins.plugins.git.GitBranchSCMRevision plugin="git@5.4.1">
-  <head class="jenkins.plugins.git.GitBranchSCMHead">
-    <name>1_gathering_facts</name>
-  </head>
-  <hash>4a56f97a859472a8576878718fa841af082083da</hash>
-</jenkins.plugins.git.GitBranchSCMRevision>
