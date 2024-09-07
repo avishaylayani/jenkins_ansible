@@ -8,6 +8,7 @@
         name: "{{ new_user }}"
         password: "{{ new_password | password_hash('sha512') }}"
         state: present
+        create_home: true
       register: results
     # - name: debug
     #   debug:
