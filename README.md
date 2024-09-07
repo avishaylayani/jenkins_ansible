@@ -1,12 +1,12 @@
 # Ansible Jenkins Pipeline
-###This env. consists of a few containers: 
+### This env. consists of a few containers: 
 - Main Jenkins node
 - Jenkins worker Debian
 - Jenkins worker Rocky
 - Ansible Target Debian
 - Ansible Target Rocky
 
-###Objective
+### Objective
 
 Creates a Jenkins multi-branch pipeline that takes different variables for each branch, and configuring 2 target containers. 
 All the details will be used to setup the remote hosts with all the needed configuration. 
