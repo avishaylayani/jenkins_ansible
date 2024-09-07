@@ -39,7 +39,7 @@ All the details will be used to setup the remote hosts with all the needed confi
         - Port(The port NGINX will be operating on)
         - index file(The basic HTML file that will be displayed by nginx)
         - server(Hostname of the server that will host the html file)
-        - title(Text that will be displayed in the HTML file)
+        - title(Text that will be displayed in the sHTML file)
         - Ansible Credentials - Used for the ansible playbook
     - steps:
         - Installation of Nginx on both Rocky and Debian hosts and starting the service
@@ -51,7 +51,12 @@ All the details will be used to setup the remote hosts with all the needed confi
         - 1 rocky linux with the address: localhost:100
         - 1 debian with the address: localhost:200
 
-### Notes
-
-- Clone the main branch that contains the docker files with the jenkins configuration.
-- Run the Multibranch pipeline
+## Pre reqs:
+- docker or alike installed
+- docker-compose or alike installed
+### Docker additions
+- Added sshpass to workers
+- Added 2 targets
+### Jenkins
+- Required Credentials - jenkins_workers | ansible-jenkins | golden_ssh_key.pub | admin_credentials_id
+- Ansible plugin
