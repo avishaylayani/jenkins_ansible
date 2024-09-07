@@ -1,7 +1,15 @@
 # Ansible Jenkins Pipeline
+###This env. consists of a few containers: 
+- Main Jenkins node
+- Jenkins worker Debian
+- Jenkins worker Rocky
+- Ansible Target Debian
+- Ansible Target Rocky
 
-Creates Jenkins multi-branch pipeline that takes password, sshkey, NGINX. 
-All the details will be used to setup the remote host with all the provided data to pipeline via ansible playbooks/roles
+###Objective
+
+Creates a Jenkins multi-branch pipeline that takes different variables for each branch, and configuring 2 target containers. 
+All the details will be used to setup the remote hosts with all the needed configuration. 
 
 ### Steps
 
@@ -41,6 +49,5 @@ All the details will be used to setup the remote host with all the provided data
 
 ### Notes
 
-- Ansible plugin for jenkins requires additional configuration, please RTFM
-
-
+- Clone the main branch that contains the docker files with the jenkins configuration.
+- Run the Multibranch pipeline
