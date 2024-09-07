@@ -46,6 +46,10 @@ All the details will be used to setup the remote hosts with all the needed confi
         - Removing existing NGINX configuration file, and index.html file in /var/www/html (If exists)
         - Copying new NGINX conf and html file using jinja templates
         - restarting NGINX
+    - results:
+        - 2 local websites that containes HTML file with the content taken in the variable "title"
+        - 1 rocky linux with the address: localhost:100
+        - 1 debian with the address: localhost:200
 
 ### Notes
 
