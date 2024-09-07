@@ -1,7 +1,0 @@
-<?xml version='1.1' encoding='UTF-8'?>
-<jenkins.plugins.git.GitBranchSCMRevision plugin="git@5.4.1">
-  <head class="jenkins.plugins.git.GitBranchSCMHead">
-    <name>backup</name>
-  </head>
-  <hash>badba50db20e61ca49bf94a72d8549e1ea5a40e2</hash>
-</jenkins.plugins.git.GitBranchSCMRevision>

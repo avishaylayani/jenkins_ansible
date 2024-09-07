@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2024-09-06 09:40:33.990 UTC</timestamp>
+  <md5sum>a68b409ff034dece34839cfbe258f3b0</md5sum>
+  <fileName>Credential id=golden_ssh_key.pub name=golden_ssh_key.pub</fileName>
+  <usages>
+    <entry>
+      <string>ansible_multibranch_pipeline/2_ssh_key</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>
