@@ -11,7 +11,7 @@
 Creates a Jenkins multi-branch pipeline that takes different variables for each branch, and configuring 2 target containers. 
 All the details will be used to setup the remote hosts with all the needed configuration. 
 
-### Steps
+## Branches
 
 - First Branch : User Creation
     - Takes Parameters:
